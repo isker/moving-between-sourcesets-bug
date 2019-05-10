@@ -11,4 +11,10 @@ plugins {
     id 'java-library'
 }
 
-sourceSets.main.java.srcDir 'src/upstream/java'
+sourceSets {
+    upstream.java.srcDir 'src/upstream/java'
+}
+
+dependencies {
+    implementation sourceSets.upstream.output
+}
